@@ -1,4 +1,4 @@
-import Pessoas.Pessoa;
+import POO_JAVA2.Pessoas.Pessoa;
 
 
     public class Main {

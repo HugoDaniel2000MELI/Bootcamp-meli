@@ -1,4 +1,4 @@
-package praticaExecoes;
+package POO_JAVA2.praticaExecoes;
 
 public class PraticaExececoes {
     public static void main(String[] args) {

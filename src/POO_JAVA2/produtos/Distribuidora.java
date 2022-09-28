@@ -1,4 +1,4 @@
-package produtos;
+package POO_JAVA2.produtos;
 
 import java.util.ArrayList;
 import java.util.List;

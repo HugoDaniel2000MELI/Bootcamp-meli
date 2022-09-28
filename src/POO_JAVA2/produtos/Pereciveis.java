@@ -1,4 +1,4 @@
-package produtos;
+package POO_JAVA2.produtos;
 
 public class Pereciveis extends Produto {
     int diasParaVencer;
