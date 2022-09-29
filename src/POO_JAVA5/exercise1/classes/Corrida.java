@@ -52,21 +52,20 @@ public class Corrida {
         if (listaVeiculos.size() == numeroDeVeiculosPermitido) {
             System.out.println("Quantidade máxima permitida de veículos foi alcançada");
         } else {
-            listaVeiculos.add(new Carro(velocidade, acelercao, anguloGiro, placa));
+            listaVeiculos.add(new Motocicleta(velocidade, acelercao, anguloGiro, placa));
             System.out.println("Motocicleta adicionada");
         }
     }
 
     public void deleteVeiculo(Veiculo veiculo) {
-        Veiculo veiculoRemovido = null;
+//        Veiculo veiculoRemovido = null;
         for (Veiculo v : listaVeiculos) {
             if (Objects.equals(v, veiculo)) {
-                veiculoRemovido = v;
+                listaVeiculos.remove(v.getClass());
                 System.out.println("Veículo removido");
+                System.out.println(listaVeiculos);
             }
         }
-//        System.out.println(veiculoRemovido);
-        listaVeiculos.remove(Objects.equals(veiculoRemovido, veiculo));
     }
 
     public void deleteVeiculoComPlaca(String placa) {

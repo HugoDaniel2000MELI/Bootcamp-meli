@@ -13,9 +13,8 @@ public class AppCorrida {
 
 //        System.out.println(corridaMilhao.getListaVeiculos());
 
-//        corridaMilhao.deleteVeiculoComPlaca("RJ951");
-
-        System.out.println(corridaMilhao.veiculoVencedor());
-
+        corridaMilhao.deleteVeiculoComPlaca("RJ951");
+//        System.out.println(corridaMilhao.veiculoVencedor());
+//        System.out.println(corridaMilhao.getListaVeiculos());
     }
 }
