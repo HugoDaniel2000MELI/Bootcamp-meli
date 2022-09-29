@@ -1,6 +1,4 @@
-package POO_JAVA5.exercise_1.classes;
-
-import java.util.Optional;
+package POO_JAVA5.exercise1.classes;
 
 public abstract class VeiculoSocorrista{
 

@@ -1,4 +1,4 @@
-package POO_JAVA5.exercise_1.classes;
+package POO_JAVA5.exercise1.classes;
 
 public class VeiculoSocorreCarro extends VeiculoSocorrista{
 

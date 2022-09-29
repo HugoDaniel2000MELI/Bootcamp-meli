@@ -3,6 +3,7 @@ package POO_JAVA5.exercise1.classes;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Corrida {
 
@@ -11,6 +12,10 @@ public class Corrida {
     private String nome;
     private int numeroDeVeiculosPermitido;
     private List<Veiculo> listaVeiculos = new ArrayList<>();
+
+    private VeiculoSocorreCarro salvaVidasCarro = new VeiculoSocorreCarro();
+
+    private  VeiculoSocorreMoto salvaVidasMoto = new VeiculoSocorreMoto();
 
     public Corrida(int distancia, double premioEmDolares, String nome, int numeroDeVeiculosPermitido) {
         this.distancia = distancia;
@@ -58,22 +63,20 @@ public class Corrida {
     }
 
     public void deleteVeiculo(Veiculo veiculo) {
-//        Veiculo veiculoRemovido = null;
-        for (Veiculo v : listaVeiculos) {
-            if (Objects.equals(v, veiculo)) {
-                listaVeiculos.remove(v.getClass());
-                System.out.println("Veículo removido");
-                System.out.println(listaVeiculos);
-            }
+        if (veiculo != null){
+            listaVeiculos.remove(veiculo);
+            System.out.println("Veículo removido");
+        } else {
+            System.out.println("Não foi possível deletar o veículo pois o mesmo não existe");
         }
     }
 
     public void deleteVeiculoComPlaca(String placa) {
-        for (Veiculo v : listaVeiculos) {
-            if (Objects.equals(v.getPlaca(), placa)) {
-                deleteVeiculo(v);
-            }
-        }
+        List<Veiculo> listaVeiculosClone = new CopyOnWriteArrayList<>(listaVeiculos);
+        listaVeiculosClone.stream()
+                .filter(v -> Objects.equals(v.getPlaca(), placa))
+                .forEach(this::deleteVeiculo);
+//
     }
 
     public String veiculoVencedor() {
@@ -89,7 +92,25 @@ public class Corrida {
         }
 
         return veiculoVencendor.toString();
-    };
+    }
+
+//    public Veiculo buscarVeiculo(String placa){
+//        final Veiculo[] veiculo = {null};
+//        listaVeiculos.stream()
+//                .filter(v -> v.getPlaca() == placa)
+//                .forEach(v -> veiculo[0] = v);
+//
+//        return veiculo[0];
+//    }
+
+//    public void socorreAuto(String placa){
+//        final Carro[] veiculo = new Carro[1];
+//        listaVeiculos.stream()
+//                .filter(v -> v.getPlaca() == placa)
+//                .forEach(v -> veiculo[0] = v);
+//
+//        }
+//    }
 
 
 }

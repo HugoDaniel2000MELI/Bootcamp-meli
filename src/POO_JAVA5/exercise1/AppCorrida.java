@@ -10,11 +10,10 @@ public class AppCorrida {
         corridaMilhao.addCarro(300, 30, 30, "RJ777");
         corridaMilhao.addCarro(200, 22, 17, "SP725");
         corridaMilhao.addMoto(400, 30,8, "RJ951");
-
-//        System.out.println(corridaMilhao.getListaVeiculos());
+        System.out.println(corridaMilhao.getListaVeiculos());
 
         corridaMilhao.deleteVeiculoComPlaca("RJ951");
 //        System.out.println(corridaMilhao.veiculoVencedor());
-//        System.out.println(corridaMilhao.getListaVeiculos());
+        System.out.println(corridaMilhao.getListaVeiculos());
     }
 }
