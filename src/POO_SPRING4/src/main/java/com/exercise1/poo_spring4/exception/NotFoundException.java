@@ -1,7 +1,7 @@
 package com.exercise1.poo_spring4.exception;
 
-public class EmptyDatabaseException extends RuntimeException{
-    public EmptyDatabaseException(String message) {
+public class NotFoundException extends RuntimeException{
+    public NotFoundException(String message) {
         super(message);
     }
 }
